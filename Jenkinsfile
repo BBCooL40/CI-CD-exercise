@@ -2,14 +2,15 @@
     agent any
 
     stages {
-        stage("Install dependencies") {
+        stage('Install dependencies') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
-        stage("Run tests") {
+
+        stage('Run tests') {
             steps {
-                bat 'npm test'
+                sh 'npm test'
             }
         }
     }
